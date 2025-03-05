@@ -1,19 +1,39 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import React from 'react'
 import './App.css'
 import Header from './components/Header'
-import About_me from './components/About_me'
+import LandingPage from './components/LandingPage'
+import AboutMe from './components/AboutMe'
+import WorkExperience from './components/WorkExperience'
+import Skills from './components/Skills'
+import AndroidProjects from './components/AndroidProjects'
+import SpringBootProjects from './components/SpringBootProjects'
+import Footer from './components/Footer'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
-    <>
+    <div className='bg-gradient-to-br from-gray-900 via-black to-gray-800 font-raleway min-h-screen' >
+      {/* Fixed Header */}
       <Header />
-      
-      <About_me />
-    </>
+
+      {/* Main Content */}
+      <main className="pt-[10vh]">
+        <LandingPage />
+        <AboutMe />
+        <WorkExperience />
+        <Skills />
+
+        <div id='projects' className='pt-[15vh]'>
+        <AndroidProjects />
+        <SpringBootProjects />
+        </div>
+        <Footer />
+        {/* <Experience />
+        <Skills />
+        <Projects />
+        <Resume /> */}
+      </main>
+    </div>
   )
 }
 
